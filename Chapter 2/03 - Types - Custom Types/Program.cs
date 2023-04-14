@@ -12,17 +12,69 @@ Console.WriteLine($"{feet} feet equals {inches} inches.");
 Console.WriteLine($"{miles} miles equals {feet2} feet.");
 // 260 miles equals 1372800 feet.
 
-public class UnitConverter
-{
+///////////////////////////////////////////////////////////
+
+Person p1 = new Person("Israel Mendoza");
+Person p2 = new Person("Victor Bocanegra");
+
+p1.SayHello();
+// Israel Mendoza is saying hello!
+p2.SayHello();
+// Victor Bocanegra is saying hello!
+
+Person.PersonSayHello();
+// A Person knows how to say hello.
+
+///////////////////////////////////////////////////////////
+
+Panda pn1 = new Panda("Pan Dee");
+Panda pn2 = new Panda("Pan Dah");
+
+Console.WriteLine(pn1.Name);
+// Pan Dee
+Console.WriteLine(pn2.Name);
+// Pan Dah
+Console.WriteLine(Panda.Population);
+// 2
+
+public class UnitConverter {
     int ratio; // Field
 
-    public UnitConverter(int unitRatio) // Constructor
-    {
+    // Constructor
+    public UnitConverter(int unitRatio) { 
         ratio = unitRatio;
     }
 
-    public int Convert(int unit) // Method
-    {
+    // Method
+    public int Convert(int unit) {
         return unit * ratio;
     }
+}
+
+public class Person {
+    public string fullName;
+
+    public Person(string newFullName) {
+        fullName = newFullName;
+    }
+
+    public void SayHello() {
+        Console.WriteLine($"{fullName} is saying hello!");
+    }
+
+    public static void PersonSayHello() {
+        Console.WriteLine($"A Person knows how to say hello.");
+    }
+}
+
+public class Panda {
+
+    public string Name;
+    public static int Population;
+
+    public Panda (string newName) {
+        Name = newName;
+        Population = Population + 1;
+    }
+
 }
