@@ -1,4 +1,6 @@
-﻿UnitConverter feetToInches = new UnitConverter(12);
+﻿// Working with custom types.
+
+UnitConverter feetToInches = new UnitConverter(12);
 UnitConverter milesToFeet = new UnitConverter(5280);
 
 int feet = 5;
@@ -38,43 +40,45 @@ Console.WriteLine(Panda.Population);
 // 2
 
 public class UnitConverter {
-    int ratio; // Field
+    int ratio; // Private instance member.
 
     // Constructor
     public UnitConverter(int unitRatio) { 
         ratio = unitRatio;
     }
 
-    // Method
+    // Inscance method.
     public int Convert(int unit) {
         return unit * ratio;
     }
 }
 
 public class Person {
-    public string fullName;
+    public string fullName; // Public instance member.
 
+    // Constructor:
     public Person(string newFullName) {
         fullName = newFullName;
     }
 
+    // Instance method:
     public void SayHello() {
         Console.WriteLine($"{fullName} is saying hello!");
     }
-
+    // Static method:
     public static void PersonSayHello() {
         Console.WriteLine($"A Person knows how to say hello.");
     }
 }
 
 public class Panda {
-
-    public string Name;
-    public static int Population;
-
+    public string Name; // Public instance member.
+    public static int Population; // Public static member.
+    
+    // Constructor
     public Panda (string newName) {
-        Name = newName;
-        Population = Population + 1;
+        Name = newName; // Initializing the 'Name' instance member.
+        Population = Population + 1; // Increasing the class static member.
     }
 
 }
