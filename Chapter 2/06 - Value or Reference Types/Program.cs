@@ -46,11 +46,13 @@ Console.WriteLine($"p3.X = {p3.X} - p3.Y = {p3.Y}");
 Console.WriteLine($"p4.X = {p4.X} - p4.Y = {p4.Y}");
 // p4.X = 100 - p4.Y = 200
 
+// Structs are value types
 public struct Point {
     public int X;
     public int Y;
 }
 
+// Classes are reference types
 public class Pointv2 {
     public int X;
     public int Y;
