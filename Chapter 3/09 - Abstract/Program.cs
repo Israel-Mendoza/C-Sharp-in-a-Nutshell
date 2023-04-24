@@ -25,11 +25,12 @@ public class Student : Person
 {
     string name;
     int age;
-    public Student(string name, int age) 
+    public Student(string name, int age)
     {
         this.name = name;
         this.age = age;
     }
+    // Complying with the abstract class' methods:
     public override string Name { get => this.name; }
     public override int Age { get => this.age; }
     public override void Introduce() => Console.WriteLine($"Salut! Je m'apelle {Name} et j'ai {Age} ans.");
