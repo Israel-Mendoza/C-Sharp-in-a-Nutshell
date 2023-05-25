@@ -7,4 +7,9 @@ public class OrderItem
         Quantity = quantity;
         Product = product;
     }
+    public decimal FinalPrice { get => Quantity * Product.Price; }
+    public void PrintItem()
+    {
+        Product.PrintPricedItem(Quantity);
+    }
 }

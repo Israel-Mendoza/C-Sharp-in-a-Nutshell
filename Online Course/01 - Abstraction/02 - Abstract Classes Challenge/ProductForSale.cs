@@ -12,9 +12,9 @@ public abstract class ProductForSale
     public decimal GetSalesPrice(int quantity) => quantity * Price;
     public void PrintPricedItem(int quantity)
     {
-        Console.WriteLine($"Price per unit: {Price}");
-        Console.WriteLine($"Quantity: {quantity} units.");
-        Console.WriteLine($"Total price: {GetSalesPrice(quantity):F2}");
+        var priceStr = $"{GetSalesPrice(quantity):C2}";
+        var line = $"{quantity,5} | {Type,12} | {priceStr,12} | '{Description}'";
+        Console.WriteLine(line);
     }
     public abstract void ShowDetails();
 }
