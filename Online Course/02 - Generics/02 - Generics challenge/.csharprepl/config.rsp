@@ -1,0 +1,44 @@
+# Add csharprepl command line options to this file to configure csharprepl.
+# You may uncomment an option below by removing the leading '#' character.
+
+# Reference assemblies, nuget packages, and csproj files. Can be specified multiple times.
+# --reference <string[]>
+
+# Add using statement. Can be specified multiple times.
+# --using <string[]>
+
+# Reference a shared framework.
+# --framework <string>
+
+# Read a theme file for syntax highlighting. Respects the NO_COLOR standard.
+# --theme <string>
+
+# Ignores theme loaded from file and uses default theme with terminal palette colors. Respects the NO_COLOR standard.
+# --useTerminalPaletteTheme <boolean>
+
+# Formatted prompt string.
+# --prompt <string>
+
+# UTF8 output encoding will be enabled and unicode character decorations will be used (requires terminal support).
+# --useUnicode <boolean>
+
+# Determines whether prerelease NuGet versions should be taken into account when searching for the latest package version.
+# --usePrereleaseNugets <boolean>
+
+# Produce a trace file in the current directory, for CSharpRepl bug reports.
+# --trace <boolean>
+
+# Width of tab character.
+# --tabSize <int32>
+
+# Set up key bindings for trigger completion list. Can be specified multiple times.
+# --triggerCompletionListKeys <string[]>
+
+# Set up key bindings for new line character insertion. Can be specified multiple times.
+# --newLineKeys <string[]>
+
+# Set up key bindings for the submit of current prompt. Can be specified multiple times.
+# --submitPromptKeys <string[]>
+
+# Set up key bindings for the submit of current prompt with detailed output. Can be specified multiple times.
+# --submitPromptDetailedKeys <string[]>
